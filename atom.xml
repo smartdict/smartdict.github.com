@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Smartdict]]></title>
+  <link href="http://smartdict.github.com/atom.xml" rel="self"/>
+  <link href="http://smartdict.github.com/"/>
+  <updated>2012-06-03T23:48:39+03:00</updated>
+  <id>http://smartdict.github.com/</id>
+  <author>
+    <name><![CDATA[Sergey Potapov]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Smartdict introdution]]></title>
+    <link href="http://smartdict.github.com/blog/2012/06/03/smartdict-introdution/"/>
+    <updated>2012-06-03T22:14:00+03:00</updated>
+    <id>http://smartdict.github.com/blog/2012/06/03/smartdict-introdution</id>
+    <content type="html"><![CDATA[<p>Hello everyone. My name is <a href="http://github.com/greyblake">Sergey Potapov</a>, I am a
+ruby developer and the creator/maintainer of Smartdict dictionary. In this post
+I&#8217;m gonna tell you about the intention of Smartdict project and its main goals.</p>
+
+<h2>History</h2>
+
+<p>I live in <a href="http://en.wikipedia.org/wiki/Kharkiv">Kharkov</a>(Ukraine), so I am not
+a native English speaker. Learning English a few years ago I&#8217;ve come up with
+idea: I have to write every new English word down to memorize it latter, but
+it would be really cool to automate the process. That has intended me to start
+developing the software like Smartdict. I don&#8217;t wanna learn all words in my
+English textbook, I wanna learn words which I face in my daily practice.</p>
+
+<p>Probably there already were some similar programs but I had some special requirements:</p>
+
+<ul>
+<li>It should be free and open source.</li>
+<li>It should be compatible to Unix like operation system, since I&#8217;m a Linux user.</li>
+<li>It should provide some core library, since I wanna use it within <a href="http://www.vim.org/">Vim</a>.</li>
+<li>It should be possible to fetch data from different sources like <a href="http://goldendict.org/">GoldenDict</a> does.</li>
+</ul>
+
+
+<p>I started developing. Sometimes I gave it up for a few months, then I came back.
+In April 08, 2012 I released the very first version on <a href="https://github.com/smartdict/smartdict">Github</a>
+and <a href="https://rubygems.org/gems/smartdict">Rubygems</a>. It doesn&#8217;t look like a lot
+of people used it, but I got some feedback from my friends.</p>
+
+<h2>Technologies</h2>
+
+<p>I&#8217;ve decided to use the next technologies to achieve my goals:</p>
+
+<ul>
+<li>Programming language: <a href="http://www.ruby-lang.org">ruby</a></li>
+<li>GUI: <a href="http://ruby-gnome2.sourceforge.jp">GTK2</a>, but it&#8217;s possible to use another GUI libraries as well.</li>
+<li>Data storage: <a href="http://www.sqlite.org/">SQLite</a> with <a href="http://datamapper.org/">DataMapper</a> as an ORM.</li>
+</ul>
+
+
+<p>I will write another blog post for developers where I&#8217;ll dive deeper in internal
+structure of the project and technologies.</p>
+
+<h2>The current goals:</h2>
+
+<ul>
+<li>Provide ability to track and learn translated words.</li>
+<li>Integration with <a href="http://ankisrs.net/">Anki</a>. That would be a really sweet thing!</li>
+<li>Create a Vim plugin based on <a href="https://github.com/smartdict/smartdict-core">smartdict-core</a>.</li>
+</ul>
+
+
+<h2>Afterwords</h2>
+
+<p>I know it&#8217;s a short introduction. More information will come soon.
+There is a lot of work needs to be done. If you interesting in taking a part in
+the development process please let me know, I&#8217;ll appreciate your help!</p>
+
+<p>Thanks.</p>
+
+<p>P.S. Feel free to correct my English.</p>
+]]></content>
+  </entry>
+  
+</feed>

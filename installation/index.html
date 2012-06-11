@@ -9,8 +9,8 @@
   <meta name="author" content="Sergey Potapov">
 
   
-  <meta name="description" content="Installation Jun 11th, 2012 Installation Prerequisites Debian/Ubuntu On Debian/Ubuntu you need to install the next packages: libglib2.0-dev
-ligatk1. &hellip;">
+  <meta name="description" content="Installation Jun 11th, 2012 Prerequisites Debian Squeeze (6.0) 1
+apt-get install libglib2.0-dev libatk1.0-dev libcairo-dev libsqlite3-dev libpango1. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -96,36 +96,34 @@ ligatk1. &hellip;">
 <time datetime="2012-06-11T03:37:00+03:00" pubdate data-updated="true">Jun 11<span>th</span>, 2012</time></p>
   </header>
   
-  <h2>Installation</h2>
+  <h2>Prerequisites</h2>
 
-<h3>Prerequisites</h3>
-
-<h4>Debian/Ubuntu</h4>
-
-<p>On Debian/Ubuntu you need to install the next packages:</p>
-
-<ul>
-<li>libglib2.0-dev</li>
-<li>ligatk1.0-dev</li>
-<li>libcairo-dev</li>
-<li>libsqlite3-dev</li>
-<li>libpango1.0-dev</li>
-</ul>
-
-
-<p>To do that run:</p>
+<h3>Debian Squeeze (6.0)</h3>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>apt-get install libglib2.0-dev ligatk1.0-dev libcairo-dev libsqlite3-dev libpango1.0-dev</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>apt-get install libglib2.0-dev libatk1.0-dev libcairo-dev libsqlite3-dev libpango1.0-dev libgtk2.0-dev</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Ubuntu 11.10</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>apt-get install libglib2.0-dev libatk1.0-dev libcairo-dev libsqlite3-dev libpango1.0-dev libgtk2.0-dev libgdk-pixbuf2.0</span></code></pre></td></tr></table></div></figure>
 
 
 <p>Please report if you have issues or it&#8217;s not complete list of required dependencies.</p>
 
-<h3>Ruby version</h3>
+<h2>Ruby version</h2>
 
-<p>Tested on MRI 1.9.3-p125</p>
+<p>Tested on:</p>
 
-<h3>Install the gem</h3>
+<ul>
+<li>MRI 1.8.7-p358</li>
+<li>MRI 1.9.2-p290</li>
+<li>MRI 1.9.3-p125</li>
+</ul>
+
+
+<h2>Install the gem</h2>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>gem install smartdict</span></code></pre></td></tr></table></div></figure>
@@ -148,6 +146,12 @@ ligatk1. &hellip;">
 <h2>Configuring / adding new languages</h2>
 
 <p>Take a look at <code>$HOME/.smartdict/configuration.yml</code>.</p>
+
+<h2>Copyright</h2>
+
+<p>Copyright (c) 2012 Potapov Sergey. The software is distributed under
+<a href="http://www.gnu.org/licenses/gpl-2.0.txt">GNU GeneralPublic License version 2</a>.
+See GPL-LICENSE.txt file for more details.</p>
 
   
     <footer>

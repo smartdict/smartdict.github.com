@@ -5,13 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Smartdict introdution - Smartdict</title>
+  <title>Smartdict 0.1.0 is released - Smartdict</title>
   <meta name="author" content="Sergey Potapov">
 
   
-  <meta name="description" content="Hello everyone. My name is Sergey Potapov, I am a
-ruby developer and the creator/maintainer of Smartdict dictionary. In this post
-I&#8217;m gonna &hellip;">
+  <meta name="description" content="I&#8217;m glad to announce Smartdict version 0.1.0 is released!
+There are number of improvements: Automatic language detection based on alphabetic. ( &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +19,7 @@ I&#8217;m gonna &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://smartdict.github.com/blog/2012/06/03/smartdict-introdution">
+  <link rel="canonical" href="http://smartdict.github.com/blog/2012/06/11/smartdict-0-dot-1-0-is-released">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -81,7 +80,7 @@ I&#8217;m gonna &hellip;">
   
   <header>
     
-      <h1 class="entry-title">Smartdict Introdution</h1>
+      <h1 class="entry-title">Smartdict 0.1.0 Is Released</h1>
     
     
       <p class="meta">
@@ -97,73 +96,49 @@ I&#8217;m gonna &hellip;">
   
 
 
-<time datetime="2012-06-03T22:14:00+03:00" pubdate data-updated="true">Jun 3<span>rd</span>, 2012</time>
+<time datetime="2012-06-11T02:30:00+03:00" pubdate data-updated="true">Jun 11<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Hello everyone. My name is <a href="http://github.com/greyblake">Sergey Potapov</a>, I am a
-ruby developer and the creator/maintainer of Smartdict dictionary. In this post
-I&#8217;m gonna tell you about the intention of Smartdict project and its main goals.</p>
-
-<h2>History</h2>
-
-<p>I live in <a href="http://en.wikipedia.org/wiki/Kharkiv">Kharkov</a>(Ukraine), so I am not
-a native English speaker. Learning English a few years ago I&#8217;ve come up with
-idea: I have to write every new English word down to memorize it latter, but
-it would be really cool to automate the process. That has intended me to start
-developing the software like Smartdict. I don&#8217;t wanna learn all words in my
-English textbook, I wanna learn words which I face in my daily practice.</p>
-
-<p>Probably there already were some similar programs but I had some special requirements:</p>
+<div class="entry-content"><p>I&#8217;m glad to announce Smartdict version 0.1.0 is released!
+There are number of improvements:</p>
 
 <ul>
-<li>It should be free and open source.</li>
-<li>It should be compatible to Unix like operation system, since I&#8217;m a Linux user.</li>
-<li>It should provide some core library, since I wanna use it within <a href="http://www.vim.org/">Vim</a>.</li>
-<li>It should be possible to fetch data from different sources like <a href="http://goldendict.org/">GoldenDict</a> does.</li>
+<li>Automatic language detection based on alphabetic. (E.g. you are using
+English-Russian translation, it detects either Russian or English word is written)</li>
+<li><a href="http://lingvo.yandex.ru/ruby/%D1%81%20%D0%B0%D0%BD%D0%B3%D0%BB%D0%B8%D0%B9%D1%81%D0%BA%D0%BE%D0%B3%D0%BE/">LingvoYandex driver</a>
+for English-Russian translations. You can configure drivers in file <code>~/.smartdict/configuration.yml</code> in <code>drivers</code> section.</li>
+<li>Fixed number of GUI bugs.</li>
 </ul>
 
 
-<p>I started developing. Sometimes I gave it up for a few months, then I came back.
-In April 08, 2012 I released the very first version on <a href="https://github.com/smartdict/smartdict">Github</a>
-and <a href="https://rubygems.org/gems/smartdict">Rubygems</a>. It doesn&#8217;t look like a lot
-of people used it, but I got some feedback from my friends.</p>
+<h2>Installation</h2>
 
-<h2>Technologies</h2>
-
-<p>I&#8217;ve decided to use the next technologies to achieve my goals:</p>
-
-<ul>
-<li>Programming language: <a href="http://www.ruby-lang.org">ruby</a></li>
-<li>GUI: <a href="http://ruby-gnome2.sourceforge.jp">GTK2</a>, but it&#8217;s possible to use another GUI libraries as well.</li>
-<li>Data storage: <a href="http://www.sqlite.org/">SQLite</a> with <a href="http://datamapper.org/">DataMapper</a> as an ORM.</li>
-</ul>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>gem install smartdict
+</span></code></pre></td></tr></table></div></figure>
 
 
-<p>I will write another blog post for developers where I&#8217;ll dive deeper in internal
-structure of the project and technologies.</p>
+<h2>Backward compatibility note</h2>
 
-<h2>The current goals:</h2>
+<p>The DB schema was changed. If you&#8217;ve used Smartdict before please
+remove <code>~/.smartdict</code> directory to make it regenerate DB schema
+and configuration file.</p>
 
-<ul>
-<li>Provide ability to track and learn translated words.</li>
-<li>Integration with <a href="http://ankisrs.net/">Anki</a>. That would be a really sweet thing!</li>
-<li>Create a Vim plugin based on <a href="https://github.com/smartdict/smartdict-core">smartdict-core</a>.</li>
-</ul>
+<h2>Screenshots</h2>
 
+<h3>Smartdict GUI</h3>
 
-<h2>Afterwords</h2>
+<p>To run the application use <code>smartdict-gtk</code> command.
+<img src="http://i1078.photobucket.com/albums/w484/greyblake/-Smartdict.png" alt="Smartdict" /></p>
 
-<p>I know it&#8217;s a short introduction. More information will come soon.
-There is a lot of work needs to be done. If you interesting in taking a part in
-the development process please let me know, I&#8217;ll appreciate your help!</p>
+<h3>Smartdict CLI</h3>
 
-<p>Thanks.</p>
-
-<p>P.S. Feel free to correct my English.</p>
+<p>To use command line version it&#8217;s enough to have <code>smartdict-core</code> gem installed.
+<img src="http://i1078.photobucket.com/albums/w484/greyblake/smartdict-cli-010.png" alt="Smartdict" /></p>
 </div>
 
 
@@ -186,7 +161,7 @@ the development process please let me know, I&#8217;ll appreciate your help!</p>
   
 
 
-<time datetime="2012-06-03T22:14:00+03:00" pubdate data-updated="true">Jun 3<span>rd</span>, 2012</time>
+<time datetime="2012-06-11T02:30:00+03:00" pubdate data-updated="true">Jun 11<span>th</span>, 2012</time>
       
 
 
@@ -194,7 +169,7 @@ the development process please let me know, I&#8217;ll appreciate your help!</p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://smartdict.github.com/blog/2012/06/03/smartdict-introdution/" data-via="smartdictrb" data-counturl="http://smartdict.github.com/blog/2012/06/03/smartdict-introdution/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://smartdict.github.com/blog/2012/06/11/smartdict-0-dot-1-0-is-released/" data-via="smartdictrb" data-counturl="http://smartdict.github.com/blog/2012/06/11/smartdict-0-dot-1-0-is-released/" >Tweet</a>
   
   
   
@@ -203,8 +178,8 @@ the development process please let me know, I&#8217;ll appreciate your help!</p>
     
     <p class="meta">
       
+        <a class="basic-alignment left" href="/blog/2012/06/03/smartdict-introdution/" title="Previous Post: Smartdict introdution">&laquo; Smartdict introdution</a>
       
-        <a class="basic-alignment right" href="/blog/2012/06/11/smartdict-0-dot-1-0-is-released/" title="Next Post: Smartdict 0.1.0 is released">Smartdict 0.1.0 is released &raquo;</a>
       
     </p>
   </footer>
@@ -304,8 +279,8 @@ the development process please let me know, I&#8217;ll appreciate your help!</p>
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://smartdict.github.com/blog/2012/06/03/smartdict-introdution/';
-        var disqus_url = 'http://smartdict.github.com/blog/2012/06/03/smartdict-introdution/';
+        var disqus_identifier = 'http://smartdict.github.com/blog/2012/06/11/smartdict-0-dot-1-0-is-released/';
+        var disqus_url = 'http://smartdict.github.com/blog/2012/06/11/smartdict-0-dot-1-0-is-released/';
         var disqus_script = 'embed.js';
       
     (function () {
